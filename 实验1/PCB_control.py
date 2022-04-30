@@ -65,7 +65,6 @@ class pcb_simulator():
                 p = p.next
             p.next = new_node
         return new_node
-
     # 使进程ready的函数
     def admit(self, ready_node):
         if self.occupied_size+ready_node.mem_size <= self.total_memsize:
@@ -84,7 +83,6 @@ class pcb_simulator():
             return True
         else:
             return False
-
     # 将某节点放入block队列中
     def event_wait(self, block_node):
         block_node = self.drop_node(block_node)
@@ -97,9 +95,7 @@ class pcb_simulator():
         else:
             block_node.next = p.next
             p.next = block_node
-
-    # 在ready队列中找优先级最高的节点，置running队列中 running队列只能有一个节点
-    # 将running队列中的节点取出，放到ready队列最尾端
+    # 在时间片用完时自动调用 在ready队列中找优先级最高的节点置于running队列中 此队列只能有一个节点
     def running(self):
         if self.head_running.next != None:
             if self.head_ready.next == None:
@@ -148,7 +144,7 @@ class pcb_simulator():
             wakeup_node.next = p.next
             p.next = wakeup_node
         wakeup_node.status = 'ready'
-
+    # 释放进程
     def release(self, terminate_node):
         terminate_node = self.drop_node(terminate_node)
         terminate_node.status = 'exit'

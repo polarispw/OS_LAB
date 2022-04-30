@@ -1,0 +1,50 @@
+* subprocess_LRU 3490
+* M_Frame[2]:  
+* M_Frame[1]:  
+* M_Frame[0]: 1
+--------------
+* M_Frame[2]:  
+* M_Frame[1]: 2
+* M_Frame[0]: 1
+--------------
+* M_Frame[2]: 3
+* M_Frame[1]: 2
+* M_Frame[0]: 1
+--------------
+* M_Frame[2]: 4
+* M_Frame[1]: 3
+* M_Frame[0]: 2
+--------------
+* M_Frame[2]: 1
+* M_Frame[1]: 4
+* M_Frame[0]: 3
+--------------
+* M_Frame[2]: 2
+* M_Frame[1]: 1
+* M_Frame[0]: 4
+--------------
+* M_Frame[2]: 5
+* M_Frame[1]: 2
+* M_Frame[0]: 1
+--------------
+* M_Frame[2]: 1
+* M_Frame[1]: 5
+* M_Frame[0]: 2
+--------------
+* M_Frame[2]: 2
+* M_Frame[1]: 1
+* M_Frame[0]: 5
+--------------
+* M_Frame[2]: 3
+* M_Frame[1]: 2
+* M_Frame[0]: 1
+--------------
+* M_Frame[2]: 4
+* M_Frame[1]: 3
+* M_Frame[0]: 2
+--------------
+* M_Frame[2]: 5
+* M_Frame[1]: 4
+* M_Frame[0]: 3
+--------------
+* subprocess_LRU 3490 successful [3]: absence_rate=0.833333, success_rate=0.166667
